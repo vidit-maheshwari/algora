@@ -1,9 +1,10 @@
-import React from 'react'
+
+import Signup from '../SignUp/Signup'
 
 function Login() {
   return (
     <div>
-      login page
+      <Signup className="m mt-24 mb-24" />
     </div>
   )
 }

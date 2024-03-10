@@ -1,13 +1,14 @@
-import React from 'react'
+
 import Lottie from 'lottie-react'
 import animationData from "../Home/Hero_animation.json"
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import Signup from '../SignUp/Signup'
 
 
 function Home() {
 
   const [text] = useTypewriter({
-    words:["Hi There!!","I am Algora...","Your Personalised Investment Advisor"],
+    words:["Hi There!!","I am Algora..."],
     loop:{},
     typeSpeed:120,
   })
@@ -16,25 +17,51 @@ function Home() {
 
   return (
     <>
-      <div className='bg-white min-h-svh '>
+      <div className='bg-white min-h-svh'>
         <div className='flex'>
-          <div className='flex-col mt-40 w-3/5 h-2/5'>
-            <h1 className='text-5xl font-bold font-mono ml-44 px-1 py-4 text-blue-600 flex justify-centre '>{text}<Cursor/></h1>
-            {/* <button type="button" className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:border-blue-600 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500 dark:hover:border-blue-600 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 mt-0">
-            Sign Up
-            </button> */}
-            {/* <div className='card bg-red-300 flex'>
-              <div className='login'>
-                <button>Login</button>
-              </div>
-              <div className='signup'>
-                <button>Sign Up</button>
-              </div>
+          <div className='flex-col mt-20 w-3/5 h-2/5'>
+            <h1 className='text-5xl font-bold font-mono ml-72 px-1 py-4 text-blue-600 flex justify-centre '>{text}<Cursor/></h1>
+            {/* <div className="max-w-2xl mx-auto">
+          <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700 ml-48 mt-7">
 
-            </div> */}
+            <form className="space-y-6" action="#">
+              <h3 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
+              <div>
+                <label htmlFor="email" className="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your email</label>
+                <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Email" required=""/>
+                    </div>
+                <div>
+                  <label htmlFor="password" className="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your password</label>
+                  <input type="password" name="password" id="password" placeholder="Password" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required=""/>
+                        </div>
+                  <div className="flex items-start">
+                    <div className="flex items-start">
+                      <div className="flex items-center h-5">
+                        <input id="remember" aria-describedby="remember" type="checkbox" className="bg-gray-50 border border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required=""/>
+                                    </div>
+                        <div className="text-sm ml-3">
+                          <label htmlFor="remember" className="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                        </div>
+                      </div>
+                      <a href="#" className="text-sm text-blue-700 hover:underline ml-auto dark:text-blue-500">Lost
+                        Password?</a>
+                    </div>
+                    <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
+                    <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+                      Not registered? <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">Create
+                        account</a>
+                    </div>
+            </form>
+          </div>
+
+
+
+        </div> */}
+        <Signup/>
+                
           </div>
           
-          <div className=' w-2/5 h-2/5 float-right mt-30 px-1 py-5 ml-3 mr-16'>
+          <div className=' w-2/5 h-2/5 float-right mt-30 px-1 py-5 ml-3 mr-36'>
           <Lottie animationData={animationData}/>
           </div>
           
